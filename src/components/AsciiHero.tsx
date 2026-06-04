@@ -1,0 +1,29 @@
+import './AsciiHero.css'
+
+const OWL_ASCII = `    ___
+   (o o)
+   ( V )
+  /--m-m--`
+
+const BANNER = `
+ ██████╗ ██╗    ██╗██╗         ██████╗ ███████╗██╗   ██╗
+██╔═══██╗██║    ██║██║         ██╔══██╗██╔════╝██║   ██║
+██║   ██║██║ █╗ ██║██║         ██║  ██║█████╗  ██║   ██║
+██║   ██║██║███╗██║██║         ██║  ██║██╔══╝  ╚██╗ ██╔╝
+╚██████╔╝╚███╔███╔╝███████╗    ██████╔╝███████╗ ╚████╔╝
+ ╚═════╝  ╚══╝╚══╝ ╚══════╝    ╚═════╝ ╚══════╝  ╚═══╝
+`
+
+export function AsciiHero() {
+  return (
+    <header className="ascii-hero">
+      <pre className="ascii-hero__owl" aria-hidden="true">
+        {OWL_ASCII}
+      </pre>
+      <pre className="ascii-hero__banner" aria-hidden="true">
+        {BANNER.trim()}
+      </pre>
+      <h1 className="ascii-hero__headline">Tyler &apos;Owl Dev&apos; Szeto</h1>
+    </header>
+  )
+}

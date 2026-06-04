@@ -1,0 +1,42 @@
+.ascii-hero {
+  text-align: center;
+  padding: 32px 20px 24px;
+  max-width: var(--terminal-max-width);
+  margin: 0 auto;
+}
+
+.ascii-hero__owl {
+  margin: 0 auto 16px;
+  font-size: 13px;
+  line-height: 1.2;
+  color: var(--text-primary);
+  display: inline-block;
+}
+
+.ascii-hero__banner {
+  margin: 0 auto 20px;
+  font-size: 10px;
+  line-height: 1.15;
+  color: var(--text-dim);
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.ascii-hero__headline {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+  .ascii-hero__banner {
+    font-size: 7px;
+  }
+
+  .ascii-hero__headline {
+    font-size: 1.15rem;
+  }
+}

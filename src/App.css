@@ -1,0 +1,49 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.app__content {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.app--focus-active .app__content {
+  isolation: isolate;
+}
+
+.app__content--dimmed {
+  pointer-events: none;
+}
+
+.app__content--dimmed .ascii-hero,
+.app__content--dimmed .resume-script,
+.app__content--dimmed .app__terminals .terminal-window:not(.terminal-window--focused),
+.app__content--dimmed .app__hint {
+  opacity: 0.25;
+  filter: blur(1px);
+}
+
+.app__content--dimmed .terminal-window--focused {
+  pointer-events: auto;
+  opacity: 1;
+  filter: none;
+}
+
+.app__terminals {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 0 20px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.app__hint {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 12px;
+  padding: 0 20px 32px;
+  margin: 0;
+}

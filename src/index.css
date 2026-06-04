@@ -1,0 +1,55 @@
+:root {
+  --bg-page: #000000;
+  --bg-terminal: #0d0d0d;
+  --bg-titlebar: #3a3a3a;
+  --text-primary: #ffffff;
+  --text-dim: #a0a0a0;
+  --prompt-user: #39ff14;
+  --prompt-path: #6cb6ff;
+  --traffic-red: #ff5f57;
+  --traffic-yellow: #febc2e;
+  --traffic-green: #28c840;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono',
+    monospace;
+  --font-size-base: 14px;
+  --font-size-focus: 18px;
+  --terminal-max-width: 900px;
+  --terminal-max-width-focus: 1100px;
+  --type-speed-ms: 28;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: var(--prompt-path);
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,45 @@
+.terminal-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.terminal-prompt__line {
+  flex: 1;
+  min-width: 200px;
+  word-break: break-all;
+}
+
+.terminal-prompt__user {
+  color: var(--prompt-user);
+}
+
+.terminal-prompt__path {
+  color: var(--prompt-path);
+}
+
+.terminal-prompt__command {
+  color: var(--text-primary);
+}
+
+.terminal-run {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-dim);
+  padding: 4px 14px;
+  font-size: inherit;
+  border-radius: 4px;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.terminal-run:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--text-primary);
+}
+
+.terminal-run:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
