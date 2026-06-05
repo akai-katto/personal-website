@@ -11,6 +11,7 @@ export type SectionHeader = {
   kind: 'header'
   id: string
   title: string
+  command: string
   heading: string
 }
 
@@ -41,7 +42,8 @@ export const resumeItems: ResumeItem[] = [
     kind: 'header',
     id: 'about-header',
     title: 'about — tylerdev@portfolio: ~/about — zsh — 80x24',
-    heading: '# A B O U T   M E',
+    command: 'cat about.md',
+    heading: '# ABOUT ME',
   },
   {
     kind: 'terminal',
@@ -89,7 +91,8 @@ export const resumeItems: ResumeItem[] = [
     kind: 'header',
     id: 'experience-header',
     title: 'experience — tylerdev@portfolio: ~/experience — zsh — 80x24',
-    heading: '# E X P E R I E N C E',
+    command: 'cat experience.md',
+    heading: '# EXPERIENCE',
   },
   {
     kind: 'terminal',
@@ -190,7 +193,8 @@ export const resumeItems: ResumeItem[] = [
     kind: 'header',
     id: 'projects-header',
     title: 'projects — tylerdev@portfolio: ~/projects — zsh — 80x24',
-    heading: '# P R O J E C T S',
+    command: 'cat projects.md',
+    heading: '# PROJECTS',
   },
   {
     kind: 'terminal',
@@ -220,7 +224,8 @@ export const resumeItems: ResumeItem[] = [
     kind: 'header',
     id: 'links-header',
     title: 'links — tylerdev@portfolio: ~/links — zsh — 80x24',
-    heading: '# L I N K S',
+    command: 'cat links.md',
+    heading: '# LINKS',
   },
   {
     kind: 'terminal',

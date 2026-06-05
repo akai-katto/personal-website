@@ -4,12 +4,24 @@
   padding-bottom: 16px;
 }
 
+.section-header-window__command {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--prompt-user);
+}
+
+.terminal-window--focused .section-header-window__command {
+  font-size: 0.95rem;
+}
+
 .section-header-window__heading {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   color: var(--text-primary);
 }
 
@@ -18,8 +30,11 @@
 }
 
 @media (max-width: 640px) {
+  .section-header-window__command {
+    font-size: 0.85rem;
+  }
+
   .section-header-window__heading {
     font-size: 1.35rem;
-    letter-spacing: 0.05em;
   }
 }

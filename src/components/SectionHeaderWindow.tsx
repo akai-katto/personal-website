@@ -41,6 +41,7 @@ export function SectionHeaderWindow({
 
       {showBody && (
         <div className="terminal-window__body section-header-window__body">
+          <p className="section-header-window__command">{section.command}</p>
           <p className="section-header-window__heading">{section.heading}</p>
         </div>
       )}
