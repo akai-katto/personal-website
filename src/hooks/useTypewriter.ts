@@ -7,7 +7,7 @@ function prefersReducedMotion(): boolean {
   )
 }
 
-export function useTypewriter(lines: string[], speedMs = 28) {
+export function useTypewriter(lines: string[], speedMs = 14) {
   const fullText = lines.join('\n')
   const [displayedText, setDisplayedText] = useState('')
   const [isTyping, setIsTyping] = useState(false)
