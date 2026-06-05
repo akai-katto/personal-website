@@ -1,9 +1,9 @@
 import './AsciiHero.css'
 
-const OWL_ASCII = `    ___
-   (o o)
-   ( V )
-  /--m-m--`
+const OWL_ASCII = `        ,___,
+        [O,O]
+        /)__)
+       --"--`
 
 const BANNER = `
  ██████╗ ██╗    ██╗██╗         ██████╗ ███████╗██╗   ██╗

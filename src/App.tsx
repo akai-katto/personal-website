@@ -2,8 +2,9 @@ import { useCallback, useState } from 'react'
 import { AsciiHero } from './components/AsciiHero'
 import { FocusOverlay } from './components/FocusOverlay'
 import { ResumeScript } from './components/ResumeScript'
+import { SectionHeaderWindow } from './components/SectionHeaderWindow'
 import { TerminalWindow } from './components/TerminalWindow'
-import { terminals } from './data/resume'
+import { isTerminalSection, resumeItems } from './data/resume'
 import './App.css'
 
 export default function App() {
@@ -12,7 +13,8 @@ export default function App() {
   const [runAllTrigger, setRunAllTrigger] = useState(0)
   const [runAllStarted, setRunAllStarted] = useState(false)
 
-  const visibleTerminals = terminals.filter((t) => !closedIds.has(t.id))
+  const visibleItems = resumeItems.filter((item) => !closedIds.has(item.id))
+  const visibleTerminals = visibleItems.filter(isTerminalSection)
 
   const handleClose = useCallback((id: string) => {
     setClosedIds((prev) => new Set(prev).add(id))
@@ -43,16 +45,26 @@ export default function App() {
         <ResumeScript onRunAll={handleRunAll} disabled={scriptDisabled} />
 
         <main className="app__terminals">
-          {visibleTerminals.map((section) => (
-            <TerminalWindow
-              key={section.id}
-              section={section}
-              isFocused={focusedId === section.id}
-              onFocusToggle={handleFocusToggle}
-              onClose={handleClose}
-              runAllTrigger={runAllTrigger}
-            />
-          ))}
+          {visibleItems.map((item) =>
+            item.kind === 'header' ? (
+              <SectionHeaderWindow
+                key={item.id}
+                section={item}
+                isFocused={focusedId === item.id}
+                onFocusToggle={handleFocusToggle}
+                onClose={handleClose}
+              />
+            ) : (
+              <TerminalWindow
+                key={item.id}
+                section={item}
+                isFocused={focusedId === item.id}
+                onFocusToggle={handleFocusToggle}
+                onClose={handleClose}
+                runAllTrigger={runAllTrigger}
+              />
+            ),
+          )}
         </main>
 
         {closedIds.size > 0 && (

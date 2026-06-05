@@ -1,0 +1,25 @@
+.section-header-window__body {
+  min-height: auto;
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+
+.section-header-window__heading {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.terminal-window--focused .section-header-window__heading {
+  font-size: 2rem;
+}
+
+@media (max-width: 640px) {
+  .section-header-window__heading {
+    font-size: 1.35rem;
+    letter-spacing: 0.05em;
+  }
+}
