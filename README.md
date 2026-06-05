@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) (use `npm run dev -- --base /` for root base locally if assets fail to load).
+Open [http://localhost:5173](http://localhost:5173).
 
 ## Build
 
@@ -23,7 +23,7 @@ npm run preview
 1. In the repo **Settings → Pages**, set **Source** to **GitHub Actions**.
 2. Push to `main` — the [deploy workflow](.github/workflows/deploy.yml) builds and publishes automatically.
 
-Live site: `https://<username>.github.io/personal-website/`
+Live site: [https://tylerszeto.com](https://tylerszeto.com)
 
 ## Usage
 
