@@ -13,30 +13,50 @@
   display: inline-block;
 }
 
-.ascii-hero__banner {
+.ascii-hero__name {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  max-width: 100%;
   margin: 0 auto 20px;
-  font-size: 10px;
+}
+
+.ascii-hero__banner {
+  margin: 0;
+  font-size: clamp(6px, 1.6vw, 10px);
   line-height: 1.15;
-  color: var(--text-dim);
+  color: var(--text-primary);
   overflow-x: auto;
   max-width: 100%;
 }
 
-.ascii-hero__headline {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 400;
-  font-family: inherit;
-  letter-spacing: 0.02em;
+.ascii-hero__dot {
+  font-size: clamp(14px, 3vw, 22px);
+  line-height: 1;
   color: var(--text-primary);
+  margin-bottom: 0.15em;
+  flex-shrink: 0;
+}
+
+.ascii-hero__headline {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 @media (max-width: 640px) {
   .ascii-hero__banner {
-    font-size: 7px;
+    font-size: 6px;
   }
 
-  .ascii-hero__headline {
-    font-size: 1.15rem;
+  .ascii-hero__dot {
+    font-size: 12px;
   }
 }

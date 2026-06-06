@@ -5,14 +5,13 @@ const OWL_ASCII = `        ,___,
         /)__)
        --"--`
 
-const BANNER = `
- ██████╗ ██╗    ██╗██╗         ██████╗ ███████╗██╗   ██╗
-██╔═══██╗██║    ██║██║         ██╔══██╗██╔════╝██║   ██║
-██║   ██║██║ █╗ ██║██║         ██║  ██║█████╗  ██║   ██║
-██║   ██║██║███╗██║██║         ██║  ██║██╔══╝  ╚██╗ ██╔╝
-╚██████╔╝╚███╔███╔╝███████╗    ██████╔╝███████╗ ╚████╔╝
- ╚═════╝  ╚══╝╚══╝ ╚══════╝    ╚═════╝ ╚══════╝  ╚═══╝
-`
+// figlet-cli "TYLER SZ" -f "ANSI Shadow"
+const BANNER = `████████╗██╗   ██╗██╗     ███████╗██████╗     ███████╗███████╗
+╚══██╔══╝╚██╗ ██╔╝██║     ██╔════╝██╔══██╗    ██╔════╝╚══███╔╝
+  ██║    ╚████╔╝ ██║     █████╗  ██████╔╝    ███████╗  ███╔╝
+ ██║     ╚██╔╝  ██║     ██╔══╝  ██╔══██╗    ╚════██║ ███╔╝
+   ██║      ██║   ███████╗███████╗██║  ██║    ███████║███████╗
+   ╚═╝      ╚═╝   ╚══════╝╚══════╝╚═╝  ╚═╝    ╚══════╝╚══════╝`
 
 export function AsciiHero() {
   return (
@@ -20,10 +19,15 @@ export function AsciiHero() {
       <pre className="ascii-hero__owl" aria-hidden="true">
         {OWL_ASCII}
       </pre>
-      <pre className="ascii-hero__banner" aria-hidden="true">
-        {BANNER.trim()}
-      </pre>
-      <h1 className="ascii-hero__headline">Tyler &apos;Owl Dev&apos; Szeto</h1>
+      <div className="ascii-hero__name">
+        <pre className="ascii-hero__banner" aria-hidden="true">
+          {BANNER}
+        </pre>
+        <span className="ascii-hero__dot" aria-hidden="true">
+          .
+        </span>
+      </div>
+      <h1 className="ascii-hero__headline">Tyler Szeto</h1>
     </header>
   )
 }

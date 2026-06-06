@@ -1,4 +1,4 @@
-# Tyler 'Owl Dev' Szeto — Terminal Resume
+# Tyler Szeto — Terminal Resume
 
 Interactive terminal-themed resume site built with Vite + React.
 
