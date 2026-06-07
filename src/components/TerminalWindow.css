@@ -24,6 +24,10 @@
   border-radius: 8px;
 }
 
+.terminal-window--header-only {
+  border-radius: 6px;
+}
+
 .terminal-window__titlebar {
   display: flex;
   align-items: center;

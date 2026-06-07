@@ -1,10 +1,10 @@
-.section-header-window__body {
+.terminal-window--header-only .terminal-window__body {
   min-height: auto;
   padding-top: 14px;
   padding-bottom: 16px;
 }
 
-.section-header-window__command {
+.header-terminal__command {
   margin: 0 0 10px;
   font-size: 0.9rem;
   font-weight: 400;
@@ -12,11 +12,7 @@
   color: var(--prompt-user);
 }
 
-.terminal-window--focused .section-header-window__command {
-  font-size: 0.95rem;
-}
-
-.section-header-window__heading {
+.header-terminal__heading {
   margin: 0;
   font-size: 1.75rem;
   font-weight: 700;
@@ -25,16 +21,12 @@
   color: var(--text-primary);
 }
 
-.terminal-window--focused .section-header-window__heading {
-  font-size: 2rem;
-}
-
 @media (max-width: 640px) {
-  .section-header-window__command {
+  .header-terminal__command {
     font-size: 0.85rem;
   }
 
-  .section-header-window__heading {
+  .header-terminal__heading {
     font-size: 1.35rem;
   }
 }

@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react'
 import { AsciiHero } from './components/AsciiHero'
 import { FocusOverlay } from './components/FocusOverlay'
 import { ResumeScript } from './components/ResumeScript'
-import { SectionHeaderWindow } from './components/SectionHeaderWindow'
+import { HeaderTerminal } from './components/HeaderTerminal'
 import { TerminalWindow } from './components/TerminalWindow'
 import { isTerminalSection, resumeItems } from './data/resume'
 import './App.css'
@@ -47,13 +47,7 @@ export default function App() {
         <main className="app__terminals">
           {visibleItems.map((item) =>
             item.kind === 'header' ? (
-              <SectionHeaderWindow
-                key={item.id}
-                section={item}
-                isFocused={focusedId === item.id}
-                onFocusToggle={handleFocusToggle}
-                onClose={handleClose}
-              />
+              <HeaderTerminal key={item.id} section={item} />
             ) : (
               <TerminalWindow
                 key={item.id}
